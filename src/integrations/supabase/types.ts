@@ -14,7 +14,84 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      services: {
+        Row: {
+          button_label: string
+          button_link: string
+          created_at: string
+          description: string
+          id: string
+          image_url: string | null
+          sort_order: number
+          tagline: string
+          title: string
+        }
+        Insert: {
+          button_label?: string
+          button_link?: string
+          created_at?: string
+          description?: string
+          id?: string
+          image_url?: string | null
+          sort_order?: number
+          tagline?: string
+          title?: string
+        }
+        Update: {
+          button_label?: string
+          button_link?: string
+          created_at?: string
+          description?: string
+          id?: string
+          image_url?: string | null
+          sort_order?: number
+          tagline?: string
+          title?: string
+        }
+        Relationships: []
+      }
+      site_settings: {
+        Row: {
+          brand: string
+          cta_label: string
+          cta_link: string
+          footer_text: string
+          hero_image_url: string | null
+          hero_kicker: string
+          hero_subtitle: string
+          hero_title: string
+          id: number
+          instagram_link: string
+          updated_at: string
+        }
+        Insert: {
+          brand?: string
+          cta_label?: string
+          cta_link?: string
+          footer_text?: string
+          hero_image_url?: string | null
+          hero_kicker?: string
+          hero_subtitle?: string
+          hero_title?: string
+          id?: number
+          instagram_link?: string
+          updated_at?: string
+        }
+        Update: {
+          brand?: string
+          cta_label?: string
+          cta_link?: string
+          footer_text?: string
+          hero_image_url?: string | null
+          hero_kicker?: string
+          hero_subtitle?: string
+          hero_title?: string
+          id?: number
+          instagram_link?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
