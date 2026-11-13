@@ -28,3 +28,6 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+- Admin panel (/painel) uses a shared-password session (ADMIN_PASSWORD + SESSION_SECRET) checked in server functions in src/lib/vitrine.functions.ts; all writes go through those functions with the admin client — no user accounts by request.
+- Images live in the private "media" bucket (public buckets are blocked in this workspace); store paths in DB and sign URLs at read time in getVitrine.
