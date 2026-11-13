@@ -89,7 +89,7 @@ const SETTING_KEYS = ["brand","hero_kicker","hero_title","hero_subtitle","hero_i
 const SERVICE_KEYS = ["title","tagline","description","image_url","button_label","button_link","sort_order"] as const;
 
 function pick<K extends string>(obj: Record<string, unknown>, keys: readonly K[]) {
-  const out: Record<string, unknown> = {};
+  const out: Record<string, any> = {}; // eslint-disable-line @typescript-eslint/no-explicit-any
   for (const k of keys) if (k in obj) out[k] = obj[k];
   return out;
 }
